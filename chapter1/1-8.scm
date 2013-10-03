@@ -12,4 +12,4 @@
   (cube-root-iter (improve-cube guess x) x)))
 
 (cube-root-iter 1 27)
-;; infinite loop?
+;; works!
