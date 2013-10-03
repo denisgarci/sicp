@@ -1,3 +1,5 @@
+#lang planet neil/sicp
+
 ;; ex1-3
 
 (define (max a b)

@@ -1,3 +1,5 @@
+#lang planet neil/sicp
+
 ;;ex1.1
 
 10

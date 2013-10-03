@@ -1,3 +1,5 @@
+#lang planet neil/sicp
+
 ;; ex1-5
 
 (define (p) (p)) ; interesting try (define (p) p)

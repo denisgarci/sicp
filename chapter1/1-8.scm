@@ -1,3 +1,5 @@
+#lang planet neil/sicp
+
 ;; ex1-8
 
 (define (improve-cube guess x)

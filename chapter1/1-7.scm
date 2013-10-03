@@ -1,3 +1,5 @@
+#lang planet neil/sicp
+
 ;; ex1-7
 
 (define (improve guess x)

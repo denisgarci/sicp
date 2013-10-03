@@ -1,3 +1,5 @@
+#lang planet neil/sicp
+
 ;; ex1-6
 
 (define  (good-enough? guess x)
