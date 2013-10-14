@@ -16,8 +16,10 @@
 ;;  12.15 / 3 = 4.05
 ;;  4.05 / 3 = 1.35
 ;;  1.35 / 3 = 0.45
-;;  So the procedure p is applied 3 times
+;;  0.45 / 3 = 0.15
+;;  0.15 / 3 = 0.05
+;;  So the procedure p is applied 5 times
 
 ;;  b/
 ;;  Growth in number of step log (ln / ln3)
-;;  Growth in space?
+;;  Growth in space? ln too?

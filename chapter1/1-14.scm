@@ -26,3 +26,8 @@
 ;; 10, 4 -> 5, 4 -> 0, 4 (1)
 ;; 5, 5 -> 5, 4 -> 0, 4 (1)
 ;; 10, 3 -> 0, 3 (1)
+
+;; linear space penny (tree)
+;; time? add one to eleven what happen? double the size of the tree
+;; so exp! 2^n
+;;
