@@ -4,6 +4,8 @@
 
 (define (identity x) x)
 
+(define (inc x) (+ x 1))
+
 (define (cube x)
     (* x x x))
 
@@ -34,10 +36,28 @@
     (* (add-h 0.0) (/ 1.0 3.0) (simpsons-sum f a add-h n)))
 
 
+;; new version using the sum function... thanks Brian and Nancy
+
+;; works so much better!
+
+(define (new-simpsons-integral f a b n)
+    (define (simpsons-term k)
+        (define coef
+            (cond ((or (= k 0) (= k n)) 1)
+                  ((= (remainder k 2) 0) 2)
+                  (else 4)))
+        (define y-k (f (+ a (* k h))))
+    (* coef y-k))
+    (define h (/ (- b a) n))
+    (* (/ h 3.0) (sum simpsons-term 0 inc n)))
+
+
 (integral identity 0 1 0.01)
 (integral cube 0 1 0.01)
 
 (simpsons-integral identity 0 1 100)
 (simpsons-integral cube 0 1 100)
 
+(new-simpsons-integral identity 0 1 100)
+(new-simpsons-integral cube 0 1 100)
 
