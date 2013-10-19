@@ -31,13 +31,13 @@
     (gcd b (remainder a b))))
 
 (define (filtered-accumulate filter combiner null-value term a next b)
-    (define filtered-a
+    (define filtered-term-a
         (if (filter a)
-            a
+            (term a)
             null-value))
     (if (> a b)
         null-value
-        (combiner (term filtered-a) (filtered-accumulate filter combiner null-value term (next a) next b))))
+        (combiner filtered-term-a (filtered-accumulate filter combiner null-value term (next a) next b))))
 
 (define (sum-square-prime a b) (filtered-accumulate prime? + 0 square a inc b))
 
