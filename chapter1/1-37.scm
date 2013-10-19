@@ -5,9 +5,12 @@
 ; a
 
 (define (cont-frac n d k)
-	(if (= k 1)
-		(/ (n 1) (d 1))
-		(/ (n k) (+ (d k) (cont-frac n d (- k 1)))))) ; problem with the derm order, can change with the def of n and d
+	;; we need a counter to start bottom ((n k)/ (d k)) to top
+	(define (iter count)
+		(if (= count k)
+			(/ (n k) (d k))
+			(/ (n count) (+ (d count) (iter (+ count 1))))))
+	(iter 1))
 
 (define (golden-r k)
 	(cont-frac (lambda (i) 1.0) (lambda (i) 1.0) k))
