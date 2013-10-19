@@ -21,7 +21,7 @@
 	(define (iter acc count)
 		(if (= count 0)
 			acc
-			(iter (/ (n k) (+ (d k) acc)) (- count 1))))
+			(iter (/ (n count) (+ (d count) acc)) (- count 1))))
 	(iter 0.0 k))
 
 (define (golden-r-iter k)
