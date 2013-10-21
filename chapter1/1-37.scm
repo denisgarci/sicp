@@ -15,7 +15,7 @@
 (define (golden-r k)
 	(cont-frac (lambda (i) 1.0) (lambda (i) 1.0) k))
 
-(golden-r 10)
+(/ 1.0 (golden-r 12))
 
 (define (cont-frac-iter n d k)
 	(define (iter acc count)
@@ -27,4 +27,6 @@
 (define (golden-r-iter k)
 	(cont-frac-iter (lambda (i) 1.0) (lambda (i) 1.0) k))
 
-(golden-r-iter 10)
+(/ 1.0 (golden-r-iter 12))
+
+;; min value for k 12
