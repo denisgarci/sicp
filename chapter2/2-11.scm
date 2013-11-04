@@ -9,10 +9,10 @@
 
 (define (lower-bound x) (cdr x))
 
-(define (mul-interval x y)
-    (let ((lox (lower-bound x))
-          (upx (upper-bound x))
-          (loy (lower-bound y))
-          (upy (upper-bound y)))
-        (let ((lo (cond 
-    (make-interval lo up)))
+;; (define (mul-interval x y)
+;;     (let ((lox (lower-bound x))
+;;           (upx (upper-bound x))
+;;           (loy (lower-bound y))
+;;           (upy (upper-bound y)))
+;;         (let ((lo (cond
+;;     (make-interval lo up)))

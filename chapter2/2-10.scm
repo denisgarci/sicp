@@ -16,13 +16,13 @@
     (make-interval (min p1 p2 p3 p4) (max p1 p2 p3 p4))))
 
 (define (div-interval x y)
-    (if (or (= (lower-bound y) 0) (= (upper-bound y) 0))
+    (if (not (> (* (lower-bound y) (upper-bound y)) 0))
         (display "ZeroDivsionError")
         (mul-interval x
             (make-interval (/ 1.0 (upper-bound y))
                 (/ 1.0 (lower-bound y))))))
 
 (define x (make-interval 1 2))
-(define y (make-interval 0 1))
+(define y (make-interval -1 1))
 
 (div-interval x y)
