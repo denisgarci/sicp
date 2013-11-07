@@ -33,4 +33,5 @@
 (square-list2 (list 1 2 3 4))
 ; again cons at the beginning thus cannot be used in this way
 ; cf empty case (cons nil last) and it should be (cons last nil)
+; cons answer (is a lit!) (a value)
 ; (1 4 9 16)
